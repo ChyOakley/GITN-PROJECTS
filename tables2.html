@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison Table</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            height: 50px;
+        }
+
+        td {
+            height: 50px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .row-header {
+            background-color: #e6e6e6;
+            font-weight: bold;
+        }
+
+        .features, .price {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th rowspan="2">Product Name</th>
+        <th colspan="2">Features & Pricing</th>
+        <th rowspan="2">Rating</th>
+        <th rowspan="2">Availability</th>
+    </tr>
+    <tr>
+        <th class="features">Features</th>
+        <th class="price">Price</th>
+    </tr>
+    <tr>
+        <td class="row-header">Apple iPhone 14</td>
+        <td>A15 Bionic Chip, 128GB Storage</td>
+        <td>$999</td>
+        <td>4.8</td>
+        <td>In Stock</td>
+    </tr>
+    <tr>
+        <td class="row-header">Samsung Galaxy S23</td>
+        <td>Snapdragon 8 Gen 2</td>
+        <td>$999</td>
+        <td>4.6</td>
+        <td>Out of Stock</td>
+    </tr>
+    <tr>
+        <td class="row-header">Google Pixel 8</td>
+        <td>Google Tensor G2, 256GB Storage</td>
+        <td>$899</td>
+        <td>4.5</td>
+        <td>Available</td>
+    </tr>
+    <tr>
+        <td class="row-header">OnePlus 11</td>
+        <td>Snapdragon 8 Gen 2, 256GB Storage</td>
+        <td>$849</td>
+        <td>4.4</td>
+        <td>Pre-Order</td>
+    </tr>
+</table>
+
+</body>
+</html>
