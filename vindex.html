@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="vstylesheet" href="vstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Online Voting System</h1>
+        <p>Vote for your preferred candidate. You must be 18 years or older to vote.</p>
+    </header>
+
+    <section>
+        <!-- Age Verification Form -->
+        <div id="age-verification">
+            <h2>Verify Your Age</h2>
+            <label for="dob">Enter your date of birth:</label>
+            <input type="date" id="dob">
+            <button id="verify-age-btn">Verify Age</button>
+            <p id="age-message"></p>
+        </div>
+
+        <!-- Voting Section (Hidden initially until age is verified) -->
+        <div id="voting-section" style="display: none;">
+            <h2>Select Your Candidate</h2>
+            <ul id="candidate-list">
+                <li>
+                    <span>Candidate 1</span>
+                    <button class="vote-btn" data-candidate="candidate1">Vote</button>
+                    <p id="candidate1-votes">Votes: 0</p>
+                </li>
+                <li>
+                    <span>Candidate 2</span>
+                    <button class="vote-btn" data-candidate="candidate2">Vote</button>
+                    <p id="candidate2-votes">Votes: 0</p>
+                </li>
+                <li>
+                    <span>Candidate 3</span>
+                    <button class="vote-btn" data-candidate="candidate3">Vote</button>
+                    <p id="candidate3-votes">Votes: 0</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Voting System. All rights reserved.</p>
+    </footer>
+
+    <script src="vscript.js"></script>
+</body>
+</html>
