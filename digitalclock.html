@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #41054d;
+      color: white;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById('clock').textContent = time;
+    }
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    input, button {
+      margin: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  <input type="text" id="item" placeholder="Expense Item">
+  <input type="number" id="amount" placeholder="Amount">
+  <button onclick="addExpense()">Add Expense</button>
+  <ul id="expense-list"></ul>
+
+  <script>
+    function addExpense() {
+      const item = document.getElementById('item').value;
+      const amount = document.getElementById('amount').value;
+      const li = document.createElement('li');
+      li.textContent = `${item} - $${amount}`;
+      document.getElementById('expense-list').appendChild(li);
+    }
+  </script>
+</body>
+</html>

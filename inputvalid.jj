@@ -1,0 +1,14 @@
+while True:
+    number = int(input("Enter a number: "))
+    if number <= 100:
+        break
+    else:
+        print("Please enter a number less than or equal to 100.")
+
+# Improved version:
+while True:
+    number = int(input("Enter a number between 50 and 100: "))
+    if 50 <= number <= 100:
+        break
+    else:
+        print("Please enter a number within the specified range.")
